@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spooky Friend Finder</title>
+    
+    
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- custom CSS sheet -->
+    <link href="https://fonts.googleapis.com/css?family=Trocchi" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./public/assets/css/style.css">
+</head>
+<style>
+        body {
+          background-color: rgb(54, 51, 49);
+         
+        }
+        .container{
+            font-family: 'Trocchi', serif;
+        }
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                       
+                    <h1 class="display-4"><img src="https://img.icons8.com/color/48/000000/ghost.png">Spooky Friend Finder</h1>
+                    <p class="lead">Find the closest match to your level of spookiness. Click survey and answer these simple questions.</p>
+                    <hr>
+                    <a class="btn btn-primary btn-lg" href="/survey" role="button">Survey</a>
+                </div>
+                <footer class="footer">
+                        <div class="container">
+                          <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/cpaul319/friendfinder">GitHub Repo</a></p>
+                        </div>
+                 </footer>
+            
+        </div>
+    </div>
+</body>
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- bootstrap js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+<!-- link to external js file -->
+<script src="./routing/apiRoutes.js"></script>
+<script src="./routing/htmlRoutes.js"></script>
+<script src="./data/friends.js"></script>
+<script src="../server.js"></script>
+
+</html>

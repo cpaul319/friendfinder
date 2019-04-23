@@ -3,15 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>FriendFinder</title>
-
+  <title>SpookyFriendFinder</title>
+ 
+ 
   <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
   <!-- Font Awesome Glyphicons -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Trocchi" rel="stylesheet">
 
   <!-- Chosen -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
@@ -20,10 +22,18 @@
 </head>
 
 <body>
-
+    <style>
+        body {
+          background-color: rgb(54, 51, 49);
+          
+        }
+        .container{
+            font-family: 'Trocchi', serif;
+        }
+</style>
   <div class="container">
-
-    <h2>Survey Questions</h2>
+      <div class="jumbotron">
+    <h2><img src="https://img.icons8.com/color/48/000000/ghost.png">Survey Questions</h2>
     <hr>
 
     <h3><strong>About You</strong></h3>
@@ -36,7 +46,7 @@
     <hr>
 
     <h3><strong>Question 1</strong></h3>
-    <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+    <h4>Do you believe psychics are real.</h4>
     <select class="chosen-select" id="q1">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -47,7 +57,7 @@
     </select>
 
     <h3><strong>Question 2</strong></h3>
-    <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+    <h4>Do you believe ghosts are real.</h4>
     <select class="chosen-select" id="q2">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -59,7 +69,7 @@
 
 
     <h3><strong>Question 3</strong></h3>
-    <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+    <h4>Have you had an experience with a psychic.</h4>
     <select class="chosen-select" id="q3">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -71,7 +81,7 @@
 
 
     <h3><strong>Question 4</strong></h3>
-    <h4>You rarely do something just out of sheer curiosity.</h4>
+    <h4>have you seen a ghost.</h4>
     <select class="chosen-select" id="q4">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -83,7 +93,7 @@
 
 
     <h3><strong>Question 5</strong></h3>
-    <h4>People can rarely upset you.</h4>
+    <h4>Have you ever felt a ghost.</h4>
     <select class="chosen-select" id="q5">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -95,7 +105,7 @@
 
 
     <h3><strong>Question 6</strong></h3>
-    <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+    <h4>Have you communicated with someone on the other side through a psychic.</h4>
     <select class="chosen-select" id="q6">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -107,7 +117,7 @@
 
 
     <h3><strong>Question 7</strong></h3>
-    <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+    <h4>Have you talked to a ghost.</h4>
     <select class="chosen-select" id="q7">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -118,7 +128,7 @@
     </select>
 
     <h3><strong>Question 8</strong></h3>
-    <h4>You rarely get carried away by fantasies and ideas.</h4>
+    <h4>Do you believe ghosts can hurt people.</h4>
     <select class="chosen-select" id="q8">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -129,7 +139,7 @@
     </select>
 
     <h3><strong>Question 9</strong></h3>
-    <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+    <h4>Are you afraid of ghosts</h4>
     <select class="chosen-select" id="q9">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -140,7 +150,7 @@
     </select>
 
     <h3><strong>Question 10</strong></h3>
-    <h4>You feel more energetic after spending time with a group of people.</h4>
+    <h4>Have you ever been inside a haunted house.</h4>
     <select class="chosen-select" id="q10">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -149,7 +159,7 @@
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-
+      </div>
     <br>
     <br>
 
@@ -160,7 +170,7 @@
     <hr>
     <footer class="footer">
       <div class="container">
-        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/cpaul319/friendfinder">GitHub Repo</a></p>
       </div>
     </footer>
 
