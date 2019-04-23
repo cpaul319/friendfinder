@@ -1,0 +1,1 @@
+var spooksData = require("../data/friends");
