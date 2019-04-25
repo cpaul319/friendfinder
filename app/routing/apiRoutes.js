@@ -13,11 +13,11 @@ module.exports = function (app) {
         var newSpook = req.body;
         var diffArr= [];
         for (var i = 0; i < spooksData.length; i++) {
-            var sum = 0;
+            var totalDiff = 0;
             for (var j = 0; j < spooksData[i].scores.length; j++) {
-                sum += Math.abs(parseInt(newSpook.scores[j]) - parseInt(spooksData[i].scores[j]));
+                totalDiff += Math.abs(parseInt(newSpook.scores[j]) - parseInt(spooksData[i].scores[j]));
             }
-            diffArr.push(sum);
+            diffArr.push(totalDiff);
         }
 
         var spookSelected = 0;
