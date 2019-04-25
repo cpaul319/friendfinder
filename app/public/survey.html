@@ -18,20 +18,11 @@
   <!-- Chosen -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
-
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 
 <body>
-  <style>
-    body {
-      background-color: rgb(54, 51, 49);
 
-    }
-
-    .container {
-      font-family: 'Trocchi', serif;
-    }
-  </style>
   <div class="container">
     <div class="jumbotron">
       <h2><img src="https://img.icons8.com/color/48/000000/ghost.png">Survey Questions</h2>
@@ -48,8 +39,8 @@
 
       <h3><strong>Question 1</strong></h3>
       <h4>Do you believe psychics are real.</h4>
-      <select class="form-control col-3" id="q1">
-        <option selected disabled>Select an Option</option>
+      <select class="answer-select" id="q1">
+        <option value="">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -59,8 +50,8 @@
 
       <h3><strong>Question 2</strong></h3>
       <h4>Do you believe ghosts are real.</h4>
-      <select class="form-control col-3" id="q2">
-        <option selected disabled>Select an Option</option>
+      <select class="answer-select"id="q2">
+        <option value="">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -71,8 +62,8 @@
 
       <h3><strong>Question 3</strong></h3>
       <h4>Have you had an experience with a psychic.</h4>
-      <select class="form-control col-3" id="q3">
-        <option selected disabled>Select an Option</option>
+      <select class="answer-select" id="q3">
+        <option value="">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -83,8 +74,8 @@
 
       <h3><strong>Question 4</strong></h3>
       <h4>have you seen a ghost.</h4>
-      <select class="form-control col-3" id="q4">
-        <option selected disabled>Select an Option</option>
+      <select class="answer-select" id="q4">
+        <option value="">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -95,8 +86,8 @@
 
       <h3><strong>Question 5</strong></h3>
       <h4>Have you ever felt a ghost.</h4>
-      <select class="form-control col-3" id="q5">
-        <option selected disabled>Select an Option</option>
+      <select class="answer-select" id="q5">
+        <option value="">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -107,8 +98,8 @@
 
       <h3><strong>Question 6</strong></h3>
       <h4>Have you communicated with someone on the other side through a psychic.</h4>
-      <select class="form-control col-3" id="q6">
-        <option selected disabled>Select an Option</option>
+      <select class="answer-select" id="q6">
+        <option value="">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -119,8 +110,8 @@
 
       <h3><strong>Question 7</strong></h3>
       <h4>Have you talked to a ghost.</h4>
-      <select class="form-control col-3" id="q7">
-        <option selected disabled>Select an Option</option>
+      <select class="answer-select" id="q7">
+        <option value="">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -130,8 +121,8 @@
 
       <h3><strong>Question 8</strong></h3>
       <h4>Do you believe ghosts can hurt people.</h4>
-      <select class="form-control col-3" id="q8">
-        <option selected disabled>Select an Option</option>
+      <select class="answer-select" id="q8">
+        <option value="">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -141,8 +132,8 @@
 
       <h3><strong>Question 9</strong></h3>
       <h4>Are you afraid of ghosts</h4>
-      <select class="form-control col-3" id="q9">
-        <option selected disabled>Select an Option</option>
+      <select class="answer-select" id="q9">
+        <option value="">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -154,8 +145,8 @@
 
       <h3><strong>Question 10</strong></h3>
       <h4>Have you ever been inside a haunted house.</h4>
-      <select class="form-control col-3" id="q10">
-        <option selected disabled>Select an Option</option>
+      <select class="answer-select" id="q10">
+        <option value="">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -164,8 +155,6 @@
       </select>
     </div>
 
-
-    <!-- Submit Button -->
     <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
         aria-hidden="true"></i>
       Submit</button>
@@ -173,7 +162,7 @@
     <hr>
     <footer class="footer">
       <div class="container">
-        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/cpaul319/friendfinder">GitHub
+        <p><a href="/api/friend">API Friends List</a> | <a href="https://github.com/cpaul319/friendfinder">GitHub
             Repo</a></p>
       </div>
     </footer>
@@ -186,13 +175,15 @@
 
       <!-- Modal content-->
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header"><strong>Best Match</strong>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title"><strong>Best Match</strong></h2>
+          <h2 class="modal-title"></h2>
         </div>
         <div class="modal-body">
           <h2 id="match-name"></h2>
-          <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+          <img id="match-img"
+            src="http://images5.fanpop.com/image/photos/25600000/Uncle-Fester-the-addams-family-1964-25663503-300-310.jpg"
+            alt="Best match image">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -204,23 +195,41 @@
 
   <script type="text/javascript">
 
+    function validateForm() {
+      var isValid = true;
+      $(".form-control").each(function () {
+        if ($(this).val() === "") {
+          isValid = false;
+        }
+      });
+
+
+    }
+
     $("#submit").on("click", function (event) {
       event.preventDefault();
 
-      // Form validation
+
       function validateForm() {
         var isValid = true;
         $(".form-control").each(function () {
           if ($(this).val() === "") {
             isValid = false;
           }
+
         });
+        $(".answer-select").each(function () {
+
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+        return isValid;
       }
 
-      // If all required fields are filled
       if (validateForm()) {
-        // Create an object for the user"s data
-        var userData = {
+
+        var newFriendData = {
           name: $("#name").val(),
           photo: $("#photo").val(),
           scores: [
@@ -236,9 +245,10 @@
             $("#q10").val()
           ]
         };
+        console.log(newFriendData);
 
         // AJAX post the data to the friends API.
-        $.post("/api/friends", userData, function (data) {
+        $.post("/api/friend", newFriendData, function (data) {
 
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           $("#match-name").text(data.name);

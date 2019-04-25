@@ -1,0 +1,18 @@
+   body {
+      background-color: rgb(54, 51, 49);
+
+    }
+
+    .container {
+      font-family: 'Trocchi', serif;
+    }
+
+    #match-img{
+      height:200px;
+      width: auto;
+      float: left;
+    }
+    .modal-title{
+      text-align: center;
+    }
+   

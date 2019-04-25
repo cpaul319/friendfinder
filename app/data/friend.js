@@ -1,8 +1,4 @@
 
-
-
-
-
 var spooksArr = [
 
     {
