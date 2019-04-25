@@ -5,17 +5,13 @@
   <meta charset="UTF-8">
   <title>SpookyFriendFinder</title>
 
-
-  <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-  <!-- Font Awesome Glyphicons -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Trocchi" rel="stylesheet">
 
-  <!-- Chosen -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
@@ -50,7 +46,7 @@
 
       <h3><strong>Question 2</strong></h3>
       <h4>Do you believe ghosts are real.</h4>
-      <select class="answer-select"id="q2">
+      <select class="answer-select" id="q2">
         <option value="">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -169,11 +165,8 @@
 
   </div>
 
-  <!-- Modal -->
   <div id="results-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
-
-      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header"><strong>Best Match</strong>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -195,20 +188,8 @@
 
   <script type="text/javascript">
 
-    function validateForm() {
-      var isValid = true;
-      $(".form-control").each(function () {
-        if ($(this).val() === "") {
-          isValid = false;
-        }
-      });
-
-
-    }
-
     $("#submit").on("click", function (event) {
       event.preventDefault();
-
 
       function validateForm() {
         var isValid = true;
@@ -245,16 +226,11 @@
             $("#q10").val()
           ]
         };
-        console.log(newFriendData);
 
-        // AJAX post the data to the friends API.
         $.post("/api/friend", newFriendData, function (data) {
 
-          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           $("#match-name").text(data.name);
           $("#match-img").attr("src", data.photo);
-
-          // Show the modal with the best match
           $("#results-modal").modal("toggle");
 
         });
