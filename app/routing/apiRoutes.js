@@ -16,7 +16,7 @@ module.exports = function (app) {
                 totalDiff += Math.abs(parseInt(newSpook.scores[j]) - parseInt(spooksData[i].scores[j]));
             }
             diffArr.push(totalDiff);
-            // console.log(totalDiff);
+            //testing heroku connection to update later
         }
 
         var spookSelected = 0;
