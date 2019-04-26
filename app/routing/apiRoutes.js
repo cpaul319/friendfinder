@@ -1,6 +1,4 @@
 var spooksData = require("../data/friend");
- 
-
 
 module.exports = function (app) {
 
@@ -11,25 +9,29 @@ module.exports = function (app) {
     app.post("/api/friend", function (req, res) {
 
         var newSpook = req.body;
-        var diffArr= [];
+        var diffArr = [];
         for (var i = 0; i < spooksData.length; i++) {
             var totalDiff = 0;
             for (var j = 0; j < spooksData[i].scores.length; j++) {
                 totalDiff += Math.abs(parseInt(newSpook.scores[j]) - parseInt(spooksData[i].scores[j]));
             }
             diffArr.push(totalDiff);
+            // console.log(totalDiff);
         }
 
         var spookSelected = 0;
-        var spookValue= parseInt(diffArr[0]);
+        var spookValue = parseInt(diffArr[0]);
+        console.log("DiffArr" +diffArr[0]);
+        
         for (var k = 1; k < diffArr.length; k++) {
             if (parseInt(diffArr[k]) < spookValue) {
+                console.log("SpookValue" + spookValue);
                 spookSelected = k;
-                spookValue=parseInt(diffArr[k]);
+                spookValue = parseInt(diffArr[k]);
             }
         }
 
-       spooksData.push(newSpook);
+        spooksData.push(newSpook);
         res.send(spooksData[spookSelected]);
     });
 
