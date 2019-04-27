@@ -10,7 +10,7 @@ module.exports = function(app){
   app.post('/api/friend', function(req,res){
     
     var newSpookScores = req.body.scores;
-    var scoresArray = [];
+    var scoresArr = [];
     var bestMatch = 0;
 
    
@@ -21,12 +21,12 @@ module.exports = function(app){
         scoresDiff += (Math.abs(parseInt(spookList[i].scores[j]) - parseInt(newSpookScores[j])));
       }
  
-      scoresArray.push(scoresDiff);
+      scoresArr.push(scoresDiff);
     }
 
      
-    for(var i=0; i<scoresArray.length; i++){
-      if(scoresArray[i] <= scoresArray[bestMatch]){
+    for(var i=0; i<scoresArr.length; i++){
+      if(scoresArr[i] <= scoresArr[bestMatch]){
         bestMatch = i;
       }
     }
