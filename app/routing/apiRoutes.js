@@ -1,38 +1,41 @@
-var spooksData = require("../data/friend");
+ 
+var spookList = require('../data/friend.js');
 
-module.exports = function (app) {
+module.exports = function(app){
+ 
+  app.get('/api/friend', function(req,res){
+    res.json(spookList);
+  });
 
-    app.get("/api/friend", function (req, res) {
-        res.json(spooksData);
-    });
+  app.post('/api/friend', function(req,res){
+    
+    var newSpookScores = req.body.scores;
+    var scoresArray = [];
+    var bestMatch = 0;
 
-    app.post("/api/friend", function (req, res) {
+   
+    for(var i=0; i<spookList.length; i++){
+      var scoresDiff = 0;
+       
+      for(var j=0; j<newSpookScores.length; j++){
+        scoresDiff += (Math.abs(parseInt(spookList[i].scores[j]) - parseInt(newSpookScores[j])));
+      }
+ 
+      scoresArray.push(scoresDiff);
+    }
 
-        var newSpook = req.body;
-        var diffArr = [];
-        for (var i = 0; i < spooksData.length; i++) {
-            var totalDiff = 0;
-            for (var j = 0; j < spooksData[i].scores.length; j++) {
-                totalDiff += Math.abs(parseInt(newSpook.scores[j]) - parseInt(spooksData[i].scores[j]));
-            }
-            diffArr.push(totalDiff);
-            //testing heroku connection to update later
-        }
+     
+    for(var i=0; i<scoresArray.length; i++){
+      if(scoresArray[i] <= scoresArray[bestMatch]){
+        bestMatch = i;
+      }
+    }
 
-        var spookSelected = 0;
-        var spookValue = parseInt(diffArr[0]);
-        console.log("DiffArr" +diffArr[0]);
-        
-        for (var k = 1; k < diffArr.length; k++) {
-            if (parseInt(diffArr[k]) < spookValue) {
-                console.log("SpookValue" + spookValue);
-                spookSelected = k;
-                spookValue = parseInt(diffArr[k]);
-            }
-        }
+     
+    var bestSpook = spookList[bestMatch];
+    res.json(bestSpook);
 
-        spooksData.push(newSpook);
-        res.send(spooksData[spookSelected]);
-    });
-
+     
+    spookList.push(req.body);
+  });
 };
