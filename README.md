@@ -7,10 +7,10 @@ Spooky Friend Finder is a simple full stack applicatio
 
 I used Express to handle routing. The app was deployed to Heroku so other users can fill it out.
 
- ![screenshot data with input](public/assets/images/friendfinder.png)
+ ![screenshot data with input](friendfinder.png)
  
  
  
-  ![screenshot data with input](public/assets/images/friendfindersuvey.png)
+  ![screenshot data with input](friendfindersuvey.png)
 
  [Link to application](https://obscure-mountain-83639.herokuapp.com/)
