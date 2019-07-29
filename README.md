@@ -1,6 +1,6 @@
  # Spooky Friend Finder #
 
-Spooky Friend Finder is a simple full stack applicatio
+Spooky Friend Finder is a simple full stack application
 
  ## Overview ##
  In this project I built a compatibility-based "FriendFinder" application -- basically a dating type app. This full-stack site takes in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
